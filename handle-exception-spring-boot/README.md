@@ -3,7 +3,7 @@
 ## Step 1: Create a class that extend from *ResponseEntityExceptionHandler*
 ## Step 2: Add a *@ControllerAdvice* anontation for this class
 ## Step 3: Handle any exception following this funtion
-``java
+```java
     @ExceptionHandler(value = { Exception.class })
     public ResponseEntity<Object> handleAnyException(Exception ex, WebRequest request) {
         String errorMessageDes = ex.getLocalizedMessage();
@@ -15,4 +15,4 @@
 
         return new ResponseEntity<>(errorMessage, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-``
+```
